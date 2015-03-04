@@ -1,6 +1,10 @@
 package transformer;
 
 public class VehicleForm extends Transformer{
-	int speed;
+	
+	public void useVehicleEnergy(int speed){
+		Transformer.useEnergy(speed);
+	}
+	
 	
 }
