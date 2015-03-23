@@ -1,10 +1,11 @@
 package transformer;
 
 public class Transformer{
-	boolean friendly;
-	boolean alive;
-	int age;
+	static boolean friendly;
+	static boolean alive;
+	static int age;
 	static int energy = age / 2;
+	static int size;
 	
 	
 	public boolean setFriendlyness(int childhood){
@@ -16,6 +17,9 @@ public class Transformer{
 		}
 		return friendly;
 	}
+	public static boolean getFriendlyness(){
+		return friendly;
+	}
 	
 	public int setAge(int robotAge){
 		if(robotAge > 250){
@@ -25,11 +29,31 @@ public class Transformer{
 		}
 		return age;
 	}
+	public static int getAge(){
+		return age;
+	}
 	public void transform(){
 		
 	}
 	public static int useEnergy(int usedEnergy){
-		energy = usedEnergy + energy;
+		if(energy < 0){
+			System.out.println("your transformer is out of energy");
+		}else{
+			energy = usedEnergy + energy;
+		}
+		
 		return energy;
+	}
+	public static int setSize(int meters){
+		
+		if(meters < 1){
+			System.out.println("Yout transformer is to small to be a transformer");
+		}else{
+			size = meters;			
+		}
+		return     size;
+	}
+	public static int getSize(){
+		return size;
 	}
 }
