@@ -3,9 +3,15 @@ package weapons;
 import transformer.Transformer;
 
 public class weapon extends Transformer{
-	
+	static int damage;
 	public static int setAttackPower(int power){	//should deal damage based on weapon used and an integer representing power
-		int damage = power / 2;
+		
+		if(Transformer.getFriendlyness() == false){
+			int damage = power / 2 * 2;
+		}else{
+			int damage = power / 2;
+		}
+		
 		Transformer.useEnergy(power / 4);
 		return damage;
 	}
