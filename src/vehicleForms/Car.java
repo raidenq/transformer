@@ -5,7 +5,7 @@ import transformer.VehicleForm;
 
 public class Car extends VehicleForm{
 	public void drive(int meters){
-		Transformer.useEnergy(meters);
+		Transformer.useEnergy(meters / 2);
 	}
 
 }
