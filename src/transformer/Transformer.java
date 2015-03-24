@@ -22,7 +22,8 @@ public class Transformer{
 	}
 	
 	public int setAge(int robotAge){
-		if(robotAge > 250){
+		age = robotAge;
+		if(age > 250){
 			alive = false;
 		}else{
 			alive = true;
