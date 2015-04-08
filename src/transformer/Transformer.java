@@ -43,7 +43,7 @@ public class Transformer{
 		if(energy < 0){
 			System.out.println("your transformer is out of energy");
 		}else{
-			energy = usedEnergy + energy;
+			energy = usedEnergy + energy / 2 * Transformer.getWeight();
 		}
 		
 		return energy;
@@ -59,5 +59,10 @@ public class Transformer{
 	}
 	public static int getSize(){
 		return size;
+	}
+	
+	public static int getWeight(){
+		int weight = size * 250;
+		return weight;
 	}
 }
