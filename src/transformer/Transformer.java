@@ -1,7 +1,7 @@
 package transformer;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-
+//finally
 import gui.transGui;;
 public class Transformer{
 	static boolean friendly;

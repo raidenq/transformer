@@ -13,5 +13,5 @@ public class transGui {
 		frame.setVisible(true);
 		frame.add(Transformer.ageInput);
 	
-	}
+	}//finally
 }
