@@ -1,6 +1,13 @@
 package transformer;
+import java.awt.Color;
+
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+
+import javax.swing.border.Border;
+
 //finally
 import gui.transGui;;
 public class Transformer{
@@ -10,6 +17,8 @@ public class Transformer{
 	static int energy = age / 2;
 	static int size;
 	public static JTextField ageInput = new JTextField();
+	public static JTextField friendlyInput = new JTextField();
+	public static Border myBorder = BorderFactory.createLineBorder(Color.blue);
 	
 	public boolean setFriendlyness(int childhood){
 		if(childhood < 4){
@@ -24,8 +33,9 @@ public class Transformer{
 		return friendly;
 	}
 	
-	public static int setAge(){
-		age = Integer.parseInt(ageInput.getText());
+	public static int setAge(int TransAge){
+		age = TransAge;
+		ageInput.setSize(25, 10);				
 		if(age > 250){
 			alive = false;
 		}else{
@@ -35,6 +45,9 @@ public class Transformer{
 	}
 	public static int getAge(){
 		return age;
+	}
+	public static boolean getAlive(){
+		return alive;
 	}
 	public void transform(){
 		
