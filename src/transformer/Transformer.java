@@ -16,11 +16,9 @@ public class Transformer{
 	static int age;
 	static int energy = age / 2;
 	static int size;
-	public static JTextField ageInput = new JTextField();
-	public static JTextField friendlyInput = new JTextField();
-	public static Border myBorder = BorderFactory.createLineBorder(Color.blue);
 	
-	public boolean setFriendlyness(int childhood){
+	
+	public boolean setFriendlyness (int childhood){
 		if(childhood < 4){
 			friendly = false;
 			
@@ -35,7 +33,7 @@ public class Transformer{
 	
 	public static int setAge(int TransAge){
 		age = TransAge;
-		ageInput.setSize(25, 10);				
+					
 		if(age > 250){
 			alive = false;
 		}else{

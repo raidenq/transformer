@@ -8,52 +8,66 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 
 import transformer.Transformer;
-
+//finally
+//finally
+//finally
 public class transGui {
+	
+	
 	public static void createFrame(){
 		JFrame frame = new JFrame();
+		JButton ageButton = new JButton("set age");
+		JTextField outPut = new JTextField();
+		JPanel myPanel = new JPanel();
+		JTextField ageInput = new JTextField();
+		
 		Border myBorder = BorderFactory.createLineBorder(Color.blue);
 		frame.setTitle("TransformerCreator");
 		frame.setSize(700, 500);
 		frame.setVisible(true);
-		frame.add(Transformer.ageInput);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+		Dimension outPutDim = new Dimension();
+		outPutDim.setSize(25, 25);
 		Dimension myDimension = new Dimension();
-		myDimension.setSize(.5, .5);
-		Transformer.ageInput.setText("15");		
-		JTextField outPut = new JTextField();
-		outPut.setSize(15, 15);
-		JButton ageButton = new JButton("set age");
-		ageButton.addActionListener(new Evt());
-		ageButton.setMaximumSize(myDimension);
-		frame.add(ageButton);
+		myDimension.setSize(250, 75);
+		
+	
+			
+		ageInput.setPreferredSize(outPutDim);
+		
+		
+		
+		
+		
+		
+		ageButton.addActionListener(new action());
+		ageButton.setPreferredSize(myDimension);
+		
 		ageButton.setAlignmentX(5);
 		ageButton.setAlignmentY(5);
-		outPut.setText("age is" + String.valueOf(Transformer.getAge()) + "alive is" + String.valueOf(Transformer.getAlive()));
-	}//finally
+		
+		
+		
+		myPanel.add(ageButton);
+		myPanel.add(outPut);
+		myPanel.add(ageInput);
+		
+		frame.add(myPanel);
+	//finally
+	
+		
+	}
+	public String getAge(){
+		return ageInput.getText();
+	}
 }
-class Evt implements ActionListener{
+
 
 	
-	public void actionPerformed(ActionEvent arg0) {
-		Transformer.setAge(Integer.parseInt(Transformer.ageInput.getText()));
-		System.out.println(Transformer.getAge());
-	}
-	
-}
-/*
-JFrame window = new JFrame();	                             //new window
-window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//allowing to exit on close
-window.setSize(800, 400);	//sizing
-window.setVisible(true);    
-window.setTitle("First");
-Border myBorder = BorderFactory.createLineBorder(Color.blue);
-JLabel label = new JLabel();	//new label
-label.setText("test");			//putting text in label
-label.setBorder(myBorder);
-window.add(label);
-*/
+
