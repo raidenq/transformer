@@ -18,13 +18,15 @@ import transformer.Transformer;
 //finally
 public class transGui {
 	
+	static JFrame frame = new JFrame();
+	static JButton ageButton = new JButton("set age");
+	static JTextField outPut = new JTextField();
+	static JPanel myPanel = new JPanel();
+	static JTextField ageInput = new JTextField();
+	static Dimension outPutDim = new Dimension();
+	static Dimension myDimension = new Dimension();
 	
 	public static void createFrame(){
-		JFrame frame = new JFrame();
-		JButton ageButton = new JButton("set age");
-		JTextField outPut = new JTextField();
-		JPanel myPanel = new JPanel();
-		JTextField ageInput = new JTextField();
 		
 		Border myBorder = BorderFactory.createLineBorder(Color.blue);
 		frame.setTitle("TransformerCreator");
@@ -32,17 +34,14 @@ public class transGui {
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-		Dimension outPutDim = new Dimension();
+		
 		outPutDim.setSize(25, 25);
-		Dimension myDimension = new Dimension();
+
 		myDimension.setSize(250, 75);
 		
 	
 			
 		ageInput.setPreferredSize(outPutDim);
-		
-		
-		
 		
 		
 		
@@ -59,13 +58,13 @@ public class transGui {
 		myPanel.add(ageInput);
 		
 		frame.add(myPanel);
-	//finally
 	
+
 		
 	}
-	public String getAge(){
-		return ageInput.getText();
-	}
+	
+	
+	
 }
 
 
